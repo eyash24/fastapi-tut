@@ -1,0 +1,81 @@
+ 
+FastAPI (Backend):
+1. Python Fundamentals:
+    ✔ Variables @done(26-07-24 12:18)
+    ✔ Data Types @done(26-07-24 12:18)
+    ✔ Functions @done(26-07-24 12:18)
+    ☐ Exception Handling
+    ☐ Classes & OOP
+    ✔ Virtual Environments @done(26-07-24 12:18)
+    ✔ Package Management (pip) @done(26-07-24 12:18)
+
+2. FastAPI Basics:
+    ☐ FastAPI Architecture 
+    ✔ Project Structure @done(26-07-24 12:21)
+    ✔ APIRouter @done(26-07-24 12:18)
+    ✔ Request Handling @done(26-07-24 12:22)
+    ✔ Response Handling @done(26-07-24 12:22)
+
+3. Pydantic:
+    ☐ Request Models
+    ☐ Response Models
+    ☐ Validation
+    ✔ Field Constraints @done(26-07-24 12:18)
+    ☐ Nested Models
+
+4. API Development:
+    ✔ GET APIs @done(26-07-24 12:18)
+    ✔ POST APIs @done(26-07-24 12:18)
+    ✔ PUT APIs @done(26-07-24 12:18)
+    ✔ DELETE APIs @done(26-07-24 12:18)
+    ☐ Path Parameters
+    ☐ Headers
+    ☐ Query Parameters
+
+5. Dependency Injection:
+    ✔ Depends() @done(26-07-24 12:19)
+    ☐ Shared Dependencies
+    ☐ Reusable Services
+
+6. Database:
+    ✔ SQL Fundamentals @done(26-07-24 12:19)
+    ☐ PostgreSQL
+    ✔ SQLAlchemy @done(26-07-24 12:19)
+    ☐ Models
+    ✔ CRUD Operations @done(26-07-24 12:19)
+    ✔ Relationships @done(26-07-24 12:22)
+
+7. Authentication & Authorization:
+    ☐ JWT Authentication
+    ☐ OAuth2
+    ☐ Role-Based Access
+
+8. Middleware:
+    ☐ Logging Middleware
+    ☐ CORS
+    ☐ Custom Middleware
+    ✔ Exception Handlers @done(26-07-24 12:19)
+
+9. Async Programming:
+    ✔ async/await @done(26-07-24 12:19)
+    ✔ Async Routes @done(26-07-24 12:19)
+    ✔ Async Database Calls @done(26-07-24 12:19)
+    ☐ Performance Considerations
+
+10. File Handling:
+    ☐ File Upload
+    ☐ File Download
+
+11. Testing:
+    ☐ Pytest
+    ☐ TestClient
+    ☐ Mocking
+    ☐ Integration Testing
+
+12. Production Readiness:
+    ✔ Environment Variables @done(26-07-24 12:19)
+    ☐ Configuration Management
+    ☐ Logging
+    ☐ Error Handling
+    ☐ Security Best Practices
+ 
