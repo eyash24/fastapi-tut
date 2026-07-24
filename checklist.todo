@@ -19,7 +19,7 @@ FastAPI (Backend):
 3. Pydantic:
     ✔ Request Models @done(26-07-24 13:44)
     ✔ Response Models @done(26-07-24 13:44)
-    ☐ Validation
+    ✔ Validation @done(26-07-24 18:42)
     ✔ Field Constraints @done(26-07-24 12:18)
     ☐ Nested Models 
 
@@ -28,8 +28,8 @@ FastAPI (Backend):
     ✔ POST APIs @done(26-07-24 12:18)
     ✔ PUT APIs @done(26-07-24 12:18)
     ✔ DELETE APIs @done(26-07-24 12:18)
-    ☐ Path Parameters
-    ☐ Headers
+    ✔ Path Parameters @done(26-07-24 18:41)
+    ✔ Headers @done(26-07-24 18:42)
     ☐ Query Parameters
 
 5. Dependency Injection:
@@ -46,9 +46,9 @@ FastAPI (Backend):
     ✔ Relationships @done(26-07-24 12:22)
 
 7. Authentication & Authorization:
-    ☐ JWT Authentication
-    ☐ OAuth2
-    ☐ Role-Based Access
+    ✔ JWT Authentication @done(26-07-24 18:41)
+    ✔ OAuth2 @done(26-07-24 18:41)
+    ✔ Role-Based Access @done(26-07-24 18:41)
 
 8. Middleware:
     ☐ Logging Middleware
@@ -63,8 +63,8 @@ FastAPI (Backend):
     ☐ Performance Considerations
 
 10. File Handling:
-    ☐ File Upload
-    ☐ File Download
+    ✔ File Upload @done(26-07-24 21:26)
+    ✔ File Download @done(26-07-24 21:26)
 
 11. Testing:
     ☐ Pytest
