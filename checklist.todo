@@ -4,24 +4,24 @@ FastAPI (Backend):
     ✔ Variables @done(26-07-24 12:18)
     ✔ Data Types @done(26-07-24 12:18)
     ✔ Functions @done(26-07-24 12:18)
-    ☐ Exception Handling
-    ☐ Classes & OOP
+    ✔ Exception Handling @done(26-07-24 13:36)
+    ✔ Classes & OOP @done(26-07-24 13:36)
     ✔ Virtual Environments @done(26-07-24 12:18)
     ✔ Package Management (pip) @done(26-07-24 12:18)
 
 2. FastAPI Basics:
-    ☐ FastAPI Architecture 
+    ✔ FastAPI Architecture @done(26-07-24 13:44)
     ✔ Project Structure @done(26-07-24 12:21)
     ✔ APIRouter @done(26-07-24 12:18)
     ✔ Request Handling @done(26-07-24 12:22)
     ✔ Response Handling @done(26-07-24 12:22)
 
 3. Pydantic:
-    ☐ Request Models
-    ☐ Response Models
+    ✔ Request Models @done(26-07-24 13:44)
+    ✔ Response Models @done(26-07-24 13:44)
     ☐ Validation
     ✔ Field Constraints @done(26-07-24 12:18)
-    ☐ Nested Models
+    ☐ Nested Models 
 
 4. API Development:
     ✔ GET APIs @done(26-07-24 12:18)
@@ -41,7 +41,7 @@ FastAPI (Backend):
     ✔ SQL Fundamentals @done(26-07-24 12:19)
     ☐ PostgreSQL
     ✔ SQLAlchemy @done(26-07-24 12:19)
-    ☐ Models
+    ✔ Models @done(26-07-24 13:37)
     ✔ CRUD Operations @done(26-07-24 12:19)
     ✔ Relationships @done(26-07-24 12:22)
 
