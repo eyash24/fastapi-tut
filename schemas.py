@@ -32,7 +32,7 @@ class UserUpdate(BaseModel):
 class Token(BaseModel):
     access_token: str
     token_type: str 
-    
+
 
 class PostBase(BaseModel):
     title: str = Field(min_length=1, max_length=100)
@@ -40,7 +40,7 @@ class PostBase(BaseModel):
     
 
 class PostCreate(PostBase):
-    user_id: int # Temporary
+    pass
 
 
 class PostUpdate(BaseModel):
