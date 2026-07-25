@@ -35,7 +35,7 @@ FastAPI (Backend):
 5. Dependency Injection:
     ✔ Depends() @done(26-07-24 12:19)
     ☐ Shared Dependencies
-    ☐ Reusable Services
+    ✔ Reusable Services @done(26-07-25 13:27)
 
 6. Database:
     ✔ SQL Fundamentals @done(26-07-24 12:19)
