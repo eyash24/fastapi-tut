@@ -8,6 +8,7 @@ from sqlalchemy import delete, select, update
 import models
 from database import AsycnSessionLocal, engine
 from image_utils import PROFILE_PICS_DIR
+
 from main import app
 
 POPULATE_IMAGES_DIR = Path('populate_images')

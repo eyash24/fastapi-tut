@@ -30,7 +30,7 @@ FastAPI (Backend):
     ✔ DELETE APIs @done(26-07-24 12:18)
     ✔ Path Parameters @done(26-07-24 18:41)
     ✔ Headers @done(26-07-24 18:42)
-    ☐ Query Parameters
+    ✔ Query Parameters @done(26-07-25 17:17)
 
 5. Dependency Injection:
     ✔ Depends() @done(26-07-24 12:19)
