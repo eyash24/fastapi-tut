@@ -127,7 +127,7 @@ async def update_post_partial(
 
     if post.user_id != current_user.id:
         raise HTTPException(
-            status=status.HTTP_403_FORBIDDEN,
+            status_code=status.HTTP_403_FORBIDDEN,
             detail='Not authorised to update this post'
         )
 

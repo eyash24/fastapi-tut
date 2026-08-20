@@ -21,7 +21,7 @@ FastAPI (Backend):
     ✔ Response Models @done(26-07-24 13:44)
     ✔ Validation @done(26-07-24 18:42)
     ✔ Field Constraints @done(26-07-24 12:18)
-    ☐ Nested Models 
+    ✔ Nested Models @done(26-08-06 18:46)
 
 4. API Development:
     ✔ GET APIs @done(26-07-24 12:18)
@@ -34,7 +34,7 @@ FastAPI (Backend):
 
 5. Dependency Injection:
     ✔ Depends() @done(26-07-24 12:19)
-    ☐ Shared Dependencies
+    ✔ Shared Dependencies @done(26-08-06 18:46)
     ✔ Reusable Services @done(26-07-25 13:27)
 
 6. Database:
@@ -60,7 +60,7 @@ FastAPI (Backend):
     ✔ async/await @done(26-07-24 12:19)
     ✔ Async Routes @done(26-07-24 12:19)
     ✔ Async Database Calls @done(26-07-24 12:19)
-    ☐ Performance Considerations
+    ✔ Performance Considerations @done(26-08-06 18:46)
 
 10. File Handling:
     ✔ File Upload @done(26-07-24 21:26)

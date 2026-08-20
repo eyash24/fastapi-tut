@@ -18,7 +18,6 @@ import hashlib
 import secrets
 
 password_hash = PasswordHash.recommended()
-
 oauth2_schema = OAuth2PasswordBearer(tokenUrl='api/users/token')
 
 
@@ -91,7 +90,7 @@ async def get_current_user(
     except (TypeError, ValueError):
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detai='Invalid or expired token',
+            detail='Invalid or expired token',
             headers={'WWW-Authenticate': 'Bearer'},
         )
 

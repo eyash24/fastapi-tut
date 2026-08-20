@@ -195,7 +195,7 @@ async def reset_password(
     if not reset_token:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
-            detail='Invalid pr expired reset token'
+            detail='Invalid or expired reset token'
         )
 
     if reset_token.expires_at.replace(tzinfo=UTC) < datetime.now(UTC):
@@ -225,11 +225,6 @@ async def reset_password(
         sql_delete(models.PasswordResetToken).where(
             models.PasswordResetToken.user_id == user.id,
         ),
-    )
-
-    await db.execute(
-        sql_delete(models.PasswordResetToken)
-        .where(models.PasswordResetToken.user_id == user.id)
     )
 
     await db.commit()
@@ -295,7 +290,7 @@ async def get_user_posts(
         .select_from(models.Post)
         .where(models.Post.user_id == user_id),
     )
-    total = count_result.scalar() or 0
+    total = count_result.scalars() or 0
 
     result = await db.execute(
         select(models.Post)
