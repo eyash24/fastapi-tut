@@ -3,6 +3,7 @@ from httpx import AsyncClient
 
 from tests.conftest import auth_header, create_test_user, login_user
 
+
 @pytest.mark.anyio
 async def test_get_posts_empty(client: AsyncClient):
     response = await client.get("/api/posts")
@@ -11,7 +12,7 @@ async def test_get_posts_empty(client: AsyncClient):
     data = response.json()
     assert data["posts"] == []
     assert data["total"] == 0
-    assert data['has_more'] is False
+    assert data["has_more"] is False
 
 
 @pytest.mark.anyio
@@ -23,20 +24,20 @@ async def test_get_post_not_found(client: AsyncClient):
 
 
 @pytest.mark.anyio
-async def test_creat_post_success(client: AsyncClient):
+async def test_create_post_success(client: AsyncClient):
     user = await create_test_user(client)
     token = await login_user(client)
     headers = auth_header(token)
 
     response = await client.post(
-        '/api/posts',
-        json={"title": "Test post", "content": "This is the content"},
+        "/api/posts",
+        json={"title": "My First Post", "content": "This is the content"},
         headers=headers,
     )
 
     assert response.status_code == 201
     data = response.json()
-    assert data["title"] == "Test post"
+    assert data["title"] == "My First Post"
     assert data["content"] == "This is the content"
     assert data["user_id"] == user["id"]
     assert "id" in data
@@ -45,10 +46,10 @@ async def test_creat_post_success(client: AsyncClient):
 
 
 @pytest.mark.anyio
-async def test_create_post_unauthorised(client: AsyncClient):
+async def test_create_post_unauthorized(client: AsyncClient):
     response = await client.post(
         "/api/posts",
-        json={'title': 'test post', 'content':'test content'}
+        json={"title": "Test Post", "content": "Test content"},
     )
 
     assert response.status_code == 401
@@ -62,14 +63,11 @@ async def test_update_post_success(client: AsyncClient):
     headers = auth_header(token)
 
     response = await client.post(
-        '/api/post',
-        json={
-            'title': 'org title',
-            'content': 'org content'
-        }
+        "/api/posts",
+        json={"title": "Original Title", "content": "Original content"},
+        headers=headers,
     )
-    print(response)
-    post_id = response.json()['id']
+    post_id = response.json()["id"]
 
     response = await client.patch(
         f"/api/posts/{post_id}",
@@ -82,6 +80,7 @@ async def test_update_post_success(client: AsyncClient):
     assert data["title"] == "Updated Title"
     assert data["content"] == "Original content"
 
+
 @pytest.mark.anyio
 async def test_update_post_wrong_user(client: AsyncClient):
     await create_test_user(client, username="user1", email="user1@example.com")
@@ -92,7 +91,6 @@ async def test_update_post_wrong_user(client: AsyncClient):
         json={"title": "User 1's Post", "content": "Only user 1 can edit this"},
         headers=auth_header(token1),
     )
-    print(response)
     post_id = response.json()["id"]
 
     await create_test_user(client, username="user2", email="user2@example.com")
@@ -110,7 +108,7 @@ async def test_update_post_wrong_user(client: AsyncClient):
 
 @pytest.mark.anyio
 async def test_get_posts_with_pagination(client: AsyncClient):
-    # await create_test_user(client)
+    await create_test_user(client)
     token = await login_user(client)
     headers = auth_header(token)
 
@@ -125,7 +123,6 @@ async def test_get_posts_with_pagination(client: AsyncClient):
     response = await client.get("/api/posts")
     assert response.status_code == 200
     data = response.json()
-    print(data)
     assert data["total"] == 5
     assert len(data["posts"]) == 5
     assert data["has_more"] is False
@@ -140,7 +137,6 @@ async def test_get_posts_with_pagination(client: AsyncClient):
     response = await client.get("/api/posts?skip=2&limit=2")
     assert response.status_code == 200
     data = response.json()
-    print(data)
     assert data["total"] == 5
     assert len(data["posts"]) == 2
     assert data["skip"] == 2
